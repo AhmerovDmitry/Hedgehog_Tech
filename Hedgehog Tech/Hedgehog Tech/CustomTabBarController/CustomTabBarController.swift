@@ -19,12 +19,11 @@ class CustomTabBarController: UITabBarController {
         
         controllers = [jokesVC, browserVC]
         
-        tabBar.backgroundColor = .green
+        tabBar.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         tabBar.unselectedItemTintColor = .gray
-        tabBar.tintColor = .purple
-        tabBar.unselectedItemTintColor = .gray
+        tabBar.tintColor = .white
     }
     
     func setupItems() {
