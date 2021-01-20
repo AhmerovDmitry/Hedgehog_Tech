@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313D25B856870080B736 /* AppDelegate.swift */; };
+		BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313F25B856870080B736 /* SceneDelegate.swift */; };
+		BC8B314725B856880080B736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8B314625B856880080B736 /* Assets.xcassets */; };
+		BC8B314A25B856880080B736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B314825B856880080B736 /* LaunchScreen.storyboard */; };
+		BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315725B8585E0080B736 /* CustomTabBarController.swift */; };
+		BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315C25B858900080B736 /* JokesViewController.swift */; };
+		BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315F25B858AF0080B736 /* BrowserViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BC8B313A25B856870080B736 /* Hedgehog Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hedgehog Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8B313D25B856870080B736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC8B313F25B856870080B736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BC8B314625B856880080B736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC8B314925B856880080B736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC8B314B25B856880080B736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Hedgehog Tech/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		BC8B315725B8585E0080B736 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		BC8B315C25B858900080B736 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		BC8B315F25B858AF0080B736 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC8B313725B856870080B736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC8B313125B856870080B736 = {
+			isa = PBXGroup;
+			children = (
+				BC8B313C25B856870080B736 /* Hedgehog Tech */,
+				BC8B313B25B856870080B736 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC8B313B25B856870080B736 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B313A25B856870080B736 /* Hedgehog Tech.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC8B313C25B856870080B736 /* Hedgehog Tech */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B316525B85CF80080B736 /* Controllers */,
+				BC8B315625B858470080B736 /* CustomTabBarController */,
+				BC8B315A25B8587C0080B736 /* App + Scene */,
+				BC8B315325B857090080B736 /* Supporting Files */,
+			);
+			path = "Hedgehog Tech";
+			sourceTree = "<group>";
+		};
+		BC8B315325B857090080B736 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B314625B856880080B736 /* Assets.xcassets */,
+				BC8B314825B856880080B736 /* LaunchScreen.storyboard */,
+				BC8B314B25B856880080B736 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC8B315625B858470080B736 /* CustomTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B315725B8585E0080B736 /* CustomTabBarController.swift */,
+			);
+			path = CustomTabBarController;
+			sourceTree = "<group>";
+		};
+		BC8B315A25B8587C0080B736 /* App + Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B313D25B856870080B736 /* AppDelegate.swift */,
+				BC8B313F25B856870080B736 /* SceneDelegate.swift */,
+			);
+			path = "App + Scene";
+			sourceTree = "<group>";
+		};
+		BC8B316525B85CF80080B736 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B315C25B858900080B736 /* JokesViewController.swift */,
+				BC8B315F25B858AF0080B736 /* BrowserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC8B313925B856870080B736 /* Hedgehog Tech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC8B314E25B856880080B736 /* Build configuration list for PBXNativeTarget "Hedgehog Tech" */;
+			buildPhases = (
+				BC8B313625B856870080B736 /* Sources */,
+				BC8B313725B856870080B736 /* Frameworks */,
+				BC8B313825B856870080B736 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hedgehog Tech";
+			productName = "Hedgehog Tech";
+			productReference = BC8B313A25B856870080B736 /* Hedgehog Tech.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC8B313225B856870080B736 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					BC8B313925B856870080B736 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = BC8B313525B856870080B736 /* Build configuration list for PBXProject "Hedgehog Tech" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC8B313125B856870080B736;
+			productRefGroup = BC8B313B25B856870080B736 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC8B313925B856870080B736 /* Hedgehog Tech */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC8B313825B856870080B736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8B314A25B856880080B736 /* LaunchScreen.storyboard in Resources */,
+				BC8B314725B856880080B736 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC8B313625B856870080B736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */,
+				BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */,
+				BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */,
+				BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */,
+				BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC8B314825B856880080B736 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC8B314925B856880080B736 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC8B314C25B856880080B736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC8B314D25B856880080B736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC8B314F25B856880080B736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JDNVBEZLP;
+				INFOPLIST_FILE = "Hedgehog Tech/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmerovdmitry.MyPets.Hedgehog-Tech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BC8B315025B856880080B736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JDNVBEZLP;
+				INFOPLIST_FILE = "Hedgehog Tech/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmerovdmitry.MyPets.Hedgehog-Tech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC8B313525B856870080B736 /* Build configuration list for PBXProject "Hedgehog Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC8B314C25B856880080B736 /* Debug */,
+				BC8B314D25B856880080B736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC8B314E25B856880080B736 /* Build configuration list for PBXNativeTarget "Hedgehog Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC8B314F25B856880080B736 /* Debug */,
+				BC8B315025B856880080B736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC8B313225B856870080B736 /* Project object */;
+}
