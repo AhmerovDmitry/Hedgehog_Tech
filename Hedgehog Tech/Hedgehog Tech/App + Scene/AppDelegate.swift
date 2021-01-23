@@ -7,8 +7,7 @@
 
 import UIKit
 
-@main
-@available(iOS 13.0, *)
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -17,11 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = CustomTabBarController()
         tabBarController.viewControllers = tabBarController.controllers
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = .white
-        self.window = window
-        window.rootViewController = tabBarController
-        window.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         
         return true
     }

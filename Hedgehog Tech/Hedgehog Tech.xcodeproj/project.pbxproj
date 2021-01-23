@@ -14,6 +14,8 @@
 		BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315725B8585E0080B736 /* CustomTabBarController.swift */; };
 		BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315C25B858900080B736 /* JokesViewController.swift */; };
 		BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315F25B858AF0080B736 /* BrowserViewController.swift */; };
+		BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */; };
+		BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BC8B315725B8585E0080B736 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		BC8B315C25B858900080B736 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		BC8B315F25B858AF0080B736 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource + Delegate.swift"; sourceTree = "<group>"; };
+		BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Other Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +100,28 @@
 		BC8B316525B85CF80080B736 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC8B315C25B858900080B736 /* JokesViewController.swift */,
-				BC8B315F25B858AF0080B736 /* BrowserViewController.swift */,
+				BCFA092725BC1D41005E69A8 /* JokesViewController */,
+				BCFA093225BC2979005E69A8 /* BrowseViewController */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BCFA092725BC1D41005E69A8 /* JokesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B315C25B858900080B736 /* JokesViewController.swift */,
+				BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */,
+				BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */,
+			);
+			path = JokesViewController;
+			sourceTree = "<group>";
+		};
+		BCFA093225BC2979005E69A8 /* BrowseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B315F25B858AF0080B736 /* BrowserViewController.swift */,
+			);
+			path = BrowseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */,
+				BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */,
 				BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */,
 				BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */,
+				BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */,
 				BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */,
 				BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */,
 			);
