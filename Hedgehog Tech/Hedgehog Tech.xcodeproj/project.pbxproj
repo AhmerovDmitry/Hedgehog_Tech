@@ -16,6 +16,8 @@
 		BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315F25B858AF0080B736 /* BrowserViewController.swift */; };
 		BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */; };
 		BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */; };
+		BCFA093625BD7856005E69A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA093525BD7856005E69A8 /* NetworkService.swift */; };
+		BCFA093A25BD79FD005E69A8 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA093925BD79FD005E69A8 /* JokesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BC8B315F25B858AF0080B736 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource + Delegate.swift"; sourceTree = "<group>"; };
 		BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Other Extensions.swift"; sourceTree = "<group>"; };
+		BCFA093525BD7856005E69A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BCFA093925BD79FD005E69A8 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		BC8B313C25B856870080B736 /* Hedgehog Tech */ = {
 			isa = PBXGroup;
 			children = (
+				BCFA093425BD7814005E69A8 /* NetworkService */,
+				BCFA093825BD79E9005E69A8 /* Model */,
 				BC8B316525B85CF80080B736 /* Controllers */,
 				BC8B315625B858470080B736 /* CustomTabBarController */,
 				BC8B315A25B8587C0080B736 /* App + Scene */,
@@ -122,6 +128,22 @@
 				BC8B315F25B858AF0080B736 /* BrowserViewController.swift */,
 			);
 			path = BrowseViewController;
+			sourceTree = "<group>";
+		};
+		BCFA093425BD7814005E69A8 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				BCFA093525BD7856005E69A8 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		BCFA093825BD79E9005E69A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCFA093925BD79FD005E69A8 /* JokesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +217,11 @@
 			files = (
 				BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */,
 				BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */,
+				BCFA093625BD7856005E69A8 /* NetworkService.swift in Sources */,
 				BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */,
 				BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */,
 				BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */,
+				BCFA093A25BD79FD005E69A8 /* JokesModel.swift in Sources */,
 				BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */,
 				BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */,
 			);

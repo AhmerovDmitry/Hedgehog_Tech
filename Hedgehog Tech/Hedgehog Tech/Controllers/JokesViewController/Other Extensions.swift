@@ -42,15 +42,23 @@ extension JokesViewController {
 @objc
 extension JokesViewController {
     func fetchPhrases() {
-        print("hello!")
-        view.endEditing(true)
+        NetworkService().fetchJokes(processedText: phraseCount) { [weak self] (result) in
+            switch result {
+            case .success(let jokes):
+                self?.allJokes = jokes
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            self?.tableView.reloadData()
+            self?.view.endEditing(true)
+        }
     }
 }
 
 // MARK: - Setup constraints
 extension JokesViewController {
     func setupConstraints() {
-        [backgroundView,tableView, phraseCount, loadButton].forEach({ view.addSubview($0) })
+        [backgroundView,tableView, phraseCountTextField, loadButton].forEach({ view.addSubview($0) })
         
         NSLayoutConstraint.activate([
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -58,22 +66,40 @@ extension JokesViewController {
             backgroundView.rightAnchor.constraint(equalTo: view.rightAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            //tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor,
+                                           constant: UIApplication.shared.statusBarFrame.height),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: phraseCount.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: phraseCountTextField.topAnchor),
             
-            phraseCount.bottomAnchor.constraint(equalTo: loadButton.topAnchor),
-            phraseCount.heightAnchor.constraint(equalToConstant: 50),
-            phraseCount.widthAnchor.constraint(equalToConstant: view.bounds.width / 2),
-            phraseCount.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            phraseCountTextField.bottomAnchor.constraint(equalTo: loadButton.topAnchor),
+            phraseCountTextField.heightAnchor.constraint(equalToConstant: 50),
+            phraseCountTextField.widthAnchor.constraint(equalToConstant: view.bounds.width / 2),
+            phraseCountTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             loadButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,
-                                               constant: -tabBarController!.tabBar.bounds.height),
-            loadButton.heightAnchor.constraint(equalTo: phraseCount.heightAnchor),
+                                               constant: -bottomLayoutGuide.length),
+            loadButton.heightAnchor.constraint(equalTo: phraseCountTextField.heightAnchor),
             loadButton.widthAnchor.constraint(equalToConstant: view.bounds.width / 3),
             loadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+}
+// MARK: - Method for hiding keyboard by taping view 
+extension JokesViewController {
+    func tapOnView() {
+        viewTapGesture.addTarget(self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(viewTapGesture)
+    }
+    @objc func hideKeyboard() -> Void {
+        view.endEditing(true)
+    }
+}
+
+@objc
+extension JokesViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        phraseCount = text
     }
 }

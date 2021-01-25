@@ -11,13 +11,14 @@ import UIKit
 extension JokesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return allJokes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .clear
-        cell.textLabel?.text = "This is cell - \(indexPath.row)"
+        cell.textLabel?.text = allJokes[indexPath.row].joke.replacingOccurrences(of: "&quot;", with: "”")
+        cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
         
         return cell

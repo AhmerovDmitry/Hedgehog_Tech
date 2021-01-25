@@ -8,6 +8,9 @@
 import UIKit
 
 class JokesViewController: UIViewController {
+    var phraseCount = String()
+    var allJokes = [Joke]()
+    let viewTapGesture = UITapGestureRecognizer()
     let backgroundView: UIImageView = {
         let bg = UIImageView()
         bg.translatesAutoresizingMaskIntoConstraints = false
@@ -26,12 +29,13 @@ class JokesViewController: UIViewController {
         
         return tableView
     }()
-    let phraseCount: UITextField = {
+    let phraseCountTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.backgroundColor = .lightGray
         textField.keyboardType = .numberPad
         textField.textAlignment = .center
+        textField.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .editingChanged)
         
         return textField
     }()
@@ -45,6 +49,7 @@ class JokesViewController: UIViewController {
         return button
     }()
     
+    // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +57,12 @@ class JokesViewController: UIViewController {
         tableView.dataSource = self
         
         registerForKeyboardNotification()
+        tapOnView()
+    }
+    // MARK: - viewDidLayoutSubviews()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         setupConstraints()
     }
-    
 }
