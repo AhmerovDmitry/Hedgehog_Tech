@@ -1,5 +1,5 @@
 //
-//  Other Extensions.swift
+//  Extensions JokesVC.swift
 //  Hedgehog Tech
 //
 //  Created by Дмитрий Ахмеров on 23.01.2021.
@@ -42,7 +42,8 @@ extension JokesViewController {
 @objc
 extension JokesViewController {
     func fetchPhrases() {
-        if Int(phraseCount) == nil || Int(phraseCount)! <= 0 || Int(phraseCount)! > 50 {
+        if Int(phraseCount) == nil || Int(phraseCount)! <= 0 || Int(phraseCount)! > 50 || phraseCount.first == "0" {
+            view.endEditing(true)
             showAlert(title: "Enter the right value",
                       message: "Value is 1 to 50")
             phraseCountTextField.text = ""
@@ -73,7 +74,7 @@ extension JokesViewController {
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             tableView.topAnchor.constraint(equalTo: view.topAnchor,
-                                           constant: UIApplication.shared.statusBarFrame.height),
+                                           constant: topLayoutGuide.length),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: phraseCountTextField.topAnchor),
@@ -119,5 +120,12 @@ extension JokesViewController {
         let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UINavigationController Setting
+extension JokesViewController {
+    func navigationControllerSettings() {
+        navigationController?.isNavigationBarHidden = true
     }
 }

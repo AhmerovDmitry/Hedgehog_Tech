@@ -8,8 +8,8 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-    let jokesVC = JokesViewController()
-    let browserVC = BrowserViewController()
+    let jokesVC = UINavigationController(rootViewController: JokesViewController())
+    let browserVC = UINavigationController(rootViewController: BrowserViewController())
     
     var controllers: [UIViewController]?
     
@@ -22,15 +22,15 @@ class CustomTabBarController: UITabBarController {
         tabBar.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        tabBar.unselectedItemTintColor = .gray
+        tabBar.unselectedItemTintColor = .darkGray
         tabBar.tintColor = .white
     }
     
     func setupItems() {
         jokesVC.tabBarItem.title = "Jokes"
-        //jokesVC.tabBarItem.image = UIImage(systemName: "trash")
+        jokesVC.tabBarItem.image = UIImage(named: "cowboyIcon")
         
         browserVC.tabBarItem.title = "API"
-        //browserVC.tabBarItem.image = UIImage(systemName: "user")
+        browserVC.tabBarItem.image = UIImage(named: "dreamIcon")
     }
 }

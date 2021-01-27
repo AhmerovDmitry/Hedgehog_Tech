@@ -1,5 +1,5 @@
 //
-//  DataSource + Delegate.swift
+//  TableViewDataSource + Delegate.swift
 //  Hedgehog Tech
 //
 //  Created by Дмитрий Ахмеров on 23.01.2021.
@@ -19,6 +19,7 @@ extension JokesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.textLabel?.text = allJokes[indexPath.row].joke.replacingOccurrences(of: "&quot;", with: "”")
         cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.selectionStyle = .none
         
         return cell

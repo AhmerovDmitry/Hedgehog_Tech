@@ -26,6 +26,7 @@ class JokesViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.backgroundColor = .clear
         tableView.separatorColor = .clear
+        tableView.estimatedRowHeight = 10
         
         return tableView
     }()
@@ -56,6 +57,7 @@ class JokesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        navigationControllerSettings()
         registerForKeyboardNotification()
         tapOnView()
     }

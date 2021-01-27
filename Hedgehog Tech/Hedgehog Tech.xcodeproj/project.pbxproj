@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC53430B25C1C215006AD462 /* Extensions BrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53430A25C1C215006AD462 /* Extensions BrowserVC.swift */; };
 		BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313D25B856870080B736 /* AppDelegate.swift */; };
 		BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313F25B856870080B736 /* SceneDelegate.swift */; };
 		BC8B314725B856880080B736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8B314625B856880080B736 /* Assets.xcassets */; };
@@ -14,13 +15,14 @@
 		BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315725B8585E0080B736 /* CustomTabBarController.swift */; };
 		BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315C25B858900080B736 /* JokesViewController.swift */; };
 		BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B315F25B858AF0080B736 /* BrowserViewController.swift */; };
-		BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */; };
-		BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */; };
+		BCFA092D25BC1D7E005E69A8 /* TableViewDataSource + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092C25BC1D7E005E69A8 /* TableViewDataSource + Delegate.swift */; };
+		BCFA093025BC24C3005E69A8 /* Extensions JokesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA092F25BC24C3005E69A8 /* Extensions JokesVC.swift */; };
 		BCFA093625BD7856005E69A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA093525BD7856005E69A8 /* NetworkService.swift */; };
 		BCFA093A25BD79FD005E69A8 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA093925BD79FD005E69A8 /* JokesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC53430A25C1C215006AD462 /* Extensions BrowserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions BrowserVC.swift"; sourceTree = "<group>"; };
 		BC8B313A25B856870080B736 /* Hedgehog Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hedgehog Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B313D25B856870080B736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8B313F25B856870080B736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +32,8 @@
 		BC8B315725B8585E0080B736 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		BC8B315C25B858900080B736 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		BC8B315F25B858AF0080B736 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
-		BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource + Delegate.swift"; sourceTree = "<group>"; };
-		BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Other Extensions.swift"; sourceTree = "<group>"; };
+		BCFA092C25BC1D7E005E69A8 /* TableViewDataSource + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewDataSource + Delegate.swift"; sourceTree = "<group>"; };
+		BCFA092F25BC24C3005E69A8 /* Extensions JokesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions JokesVC.swift"; sourceTree = "<group>"; };
 		BCFA093525BD7856005E69A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		BCFA093925BD79FD005E69A8 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				BC8B315C25B858900080B736 /* JokesViewController.swift */,
-				BCFA092C25BC1D7E005E69A8 /* DataSource + Delegate.swift */,
-				BCFA092F25BC24C3005E69A8 /* Other Extensions.swift */,
+				BCFA092C25BC1D7E005E69A8 /* TableViewDataSource + Delegate.swift */,
+				BCFA092F25BC24C3005E69A8 /* Extensions JokesVC.swift */,
 			);
 			path = JokesViewController;
 			sourceTree = "<group>";
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8B315F25B858AF0080B736 /* BrowserViewController.swift */,
+				BC53430A25C1C215006AD462 /* Extensions BrowserVC.swift */,
 			);
 			path = BrowseViewController;
 			sourceTree = "<group>";
@@ -216,11 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */,
-				BCFA092D25BC1D7E005E69A8 /* DataSource + Delegate.swift in Sources */,
+				BCFA092D25BC1D7E005E69A8 /* TableViewDataSource + Delegate.swift in Sources */,
 				BCFA093625BD7856005E69A8 /* NetworkService.swift in Sources */,
 				BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */,
 				BC8B316025B858AF0080B736 /* BrowserViewController.swift in Sources */,
-				BCFA093025BC24C3005E69A8 /* Other Extensions.swift in Sources */,
+				BCFA093025BC24C3005E69A8 /* Extensions JokesVC.swift in Sources */,
+				BC53430B25C1C215006AD462 /* Extensions BrowserVC.swift in Sources */,
 				BCFA093A25BD79FD005E69A8 /* JokesModel.swift in Sources */,
 				BC8B315825B8585E0080B736 /* CustomTabBarController.swift in Sources */,
 				BC8B315D25B858900080B736 /* JokesViewController.swift in Sources */,

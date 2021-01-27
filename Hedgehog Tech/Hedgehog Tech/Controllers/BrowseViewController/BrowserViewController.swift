@@ -6,26 +6,23 @@
 //
 
 import UIKit
+import WebKit
 
 class BrowserViewController: UIViewController {
-    let webView: UIWebView = {
-        let webView = UIWebView()
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return webView
-    }()
+    let webView = WKWebView()
+    var progressView = UIProgressView(progressViewStyle: .default)
+    let url = URL(string: "http://www.icndb.com/api/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(webView)
-        NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
-            webView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            webView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+                
+        webViewSettings()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        view.backgroundColor = .blue
+        setupConstraints()
     }
     
 }
