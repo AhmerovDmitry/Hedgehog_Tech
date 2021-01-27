@@ -42,15 +42,21 @@ extension JokesViewController {
 @objc
 extension JokesViewController {
     func fetchPhrases() {
-        NetworkService().fetchJokes(processedText: phraseCount) { [weak self] (result) in
-            switch result {
-            case .success(let jokes):
-                self?.allJokes = jokes
-            case .failure(let error):
-                print(error.localizedDescription)
+        if Int(phraseCount) == nil || Int(phraseCount)! <= 0 || Int(phraseCount)! > 50 {
+            showAlert(title: "Enter the right value",
+                      message: "Value is 1 to 50")
+            phraseCountTextField.text = ""
+        } else {
+            NetworkService().fetchJokes(processedText: phraseCount) { [weak self] (result) in
+                switch result {
+                case .success(let jokes):
+                    self?.allJokes = jokes
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                self?.tableView.reloadData()
+                self?.view.endEditing(true)
             }
-            self?.tableView.reloadData()
-            self?.view.endEditing(true)
         }
     }
 }
@@ -85,6 +91,7 @@ extension JokesViewController {
         ])
     }
 }
+
 // MARK: - Method for hiding keyboard by taping view 
 extension JokesViewController {
     func tapOnView() {
@@ -96,10 +103,21 @@ extension JokesViewController {
     }
 }
 
+// MARK: - TextField Method
 @objc
 extension JokesViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let text = textField.text else { return }
         phraseCount = text
+    }
+}
+
+//MARK: - UIAlertController
+extension JokesViewController {
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
