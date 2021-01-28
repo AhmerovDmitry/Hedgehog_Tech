@@ -8,6 +8,33 @@
 import UIKit
 
 class JokesViewController: UIViewController {
+    let descView: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Enter the number of phrases"
+        label.font = UIFont(name: "DurangoWestern", size: 18)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.isHidden = false
+        
+        return label
+    }()
+    let activityIndicatorBackground: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.alpha = 0.5
+        view.isHidden = true
+        
+        return view
+    }()
+    let revolverActivityIndicator: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "revolver")
+        
+        return view
+    }()
     var phraseCount = String()
     var allJokes = [Joke]()
     let viewTapGesture = UITapGestureRecognizer()
@@ -33,9 +60,10 @@ class JokesViewController: UIViewController {
     let phraseCountTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .white
         textField.keyboardType = .numberPad
         textField.textAlignment = .center
+        textField.layer.cornerRadius = 25
         textField.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .editingChanged)
         
         return textField
@@ -43,9 +71,10 @@ class JokesViewController: UIViewController {
     let loadButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "DurangoWestern", size: 30)
+        button.setTitleColor(.white, for: .normal)
         button.setTitle("LOAD", for: .normal)
         button.addTarget(nil, action: #selector(fetchPhrases), for: .touchUpInside)
-        button.backgroundColor = .green
         
         return button
     }()

@@ -17,7 +17,7 @@ extension JokesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .clear
-        cell.textLabel?.text = allJokes[indexPath.row].joke.replacingOccurrences(of: "&quot;", with: "”")
+        cell.textLabel?.text = "\(indexPath.row + 1). " + allJokes[indexPath.row].joke.replacingOccurrences(of: "&quot;", with: "”")
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.selectionStyle = .none

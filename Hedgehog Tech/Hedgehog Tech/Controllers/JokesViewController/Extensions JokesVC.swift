@@ -25,7 +25,7 @@ extension JokesViewController {
     @objc func keyboardWillShow(notification: Notification) {
         let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
         UIView.animate(withDuration: 2.5, animations: {
-            self.view.frame.size.height = UIScreen.main.bounds.height - (keyboardSize.height - self.tabBarController!.tabBar.bounds.height)
+            self.view.frame.size.height = (UIScreen.main.bounds.height - keyboardSize.height) + self.tabBarController!.tabBar.bounds.height
             self.view.layoutIfNeeded()
         })
     }
@@ -42,12 +42,14 @@ extension JokesViewController {
 @objc
 extension JokesViewController {
     func fetchPhrases() {
+        descView.isHidden = true
         if Int(phraseCount) == nil || Int(phraseCount)! <= 0 || Int(phraseCount)! > 50 || phraseCount.first == "0" {
             view.endEditing(true)
             showAlert(title: "Enter the right value",
                       message: "Value is 1 to 50")
             phraseCountTextField.text = ""
         } else {
+            showRevolver()
             NetworkService().fetchJokes(processedText: phraseCount) { [weak self] (result) in
                 switch result {
                 case .success(let jokes):
@@ -55,8 +57,10 @@ extension JokesViewController {
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
+                self?.activityIndicatorBackground.isHidden = true
                 self?.tableView.reloadData()
                 self?.view.endEditing(true)
+                self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
             }
         }
     }
@@ -65,7 +69,13 @@ extension JokesViewController {
 // MARK: - Setup constraints
 extension JokesViewController {
     func setupConstraints() {
-        [backgroundView,tableView, phraseCountTextField, loadButton].forEach({ view.addSubview($0) })
+        [backgroundView,
+         descView,
+         tableView,
+         phraseCountTextField,
+         loadButton,
+         activityIndicatorBackground].forEach({ view.addSubview($0) })
+        activityIndicatorBackground.addSubview(revolverActivityIndicator)
         
         NSLayoutConstraint.activate([
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -79,16 +89,31 @@ extension JokesViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: phraseCountTextField.topAnchor),
             
+            descView.bottomAnchor.constraint(equalTo: phraseCountTextField.topAnchor),
+            descView.heightAnchor.constraint(equalTo: phraseCountTextField.heightAnchor),
+            descView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            descView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
             phraseCountTextField.bottomAnchor.constraint(equalTo: loadButton.topAnchor),
             phraseCountTextField.heightAnchor.constraint(equalToConstant: 50),
             phraseCountTextField.widthAnchor.constraint(equalToConstant: view.bounds.width / 2),
             phraseCountTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             loadButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,
-                                               constant: -bottomLayoutGuide.length),
+                                               constant: -tabBarController!.tabBar.bounds.height),
             loadButton.heightAnchor.constraint(equalTo: phraseCountTextField.heightAnchor),
             loadButton.widthAnchor.constraint(equalToConstant: view.bounds.width / 3),
-            loadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            loadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            activityIndicatorBackground.topAnchor.constraint(equalTo: view.topAnchor),
+            activityIndicatorBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            activityIndicatorBackground.leftAnchor.constraint(equalTo: view.leftAnchor),
+            activityIndicatorBackground.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+            revolverActivityIndicator.heightAnchor.constraint(equalToConstant: 100),
+            revolverActivityIndicator.widthAnchor.constraint(equalToConstant: 100),
+            revolverActivityIndicator.centerYAnchor.constraint(equalTo: activityIndicatorBackground.centerYAnchor),
+            revolverActivityIndicator.centerXAnchor.constraint(equalTo: activityIndicatorBackground.centerXAnchor),
         ])
     }
 }
@@ -127,5 +152,21 @@ extension JokesViewController {
 extension JokesViewController {
     func navigationControllerSettings() {
         navigationController?.isNavigationBarHidden = true
+    }
+}
+
+// MARK: - Activity Indicator Animation
+extension JokesViewController {
+    func showRevolver() {
+        activityIndicatorBackground.isHidden = false
+        
+        if self.revolverActivityIndicator.layer.animation(forKey: "kRotationAnimationKey") == nil {
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+            rotationAnimation.fromValue = 0.0
+            rotationAnimation.toValue = Float(Double.pi * 2.0)
+            rotationAnimation.duration = 2.5
+            rotationAnimation.repeatCount = Float.infinity
+            self.revolverActivityIndicator.layer.add(rotationAnimation, forKey: "kRotationAnimationKey")
+        }
     }
 }

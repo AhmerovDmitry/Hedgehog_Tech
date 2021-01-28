@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC53430B25C1C215006AD462 /* Extensions BrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53430A25C1C215006AD462 /* Extensions BrowserVC.swift */; };
+		BC7027F825C3197800B9D7FA /* DurangoWestern.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC7027F725C3197800B9D7FA /* DurangoWestern.otf */; };
 		BC8B313E25B856870080B736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313D25B856870080B736 /* AppDelegate.swift */; };
 		BC8B314025B856870080B736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B313F25B856870080B736 /* SceneDelegate.swift */; };
 		BC8B314725B856880080B736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8B314625B856880080B736 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		BC53430A25C1C215006AD462 /* Extensions BrowserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions BrowserVC.swift"; sourceTree = "<group>"; };
+		BC7027F725C3197800B9D7FA /* DurangoWestern.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DurangoWestern.otf; sourceTree = "<group>"; };
 		BC8B313A25B856870080B736 /* Hedgehog Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hedgehog Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B313D25B856870080B736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8B313F25B856870080B736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC7027F425C314FE00B9D7FA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BC7027F725C3197800B9D7FA /* DurangoWestern.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		BC8B313125B856870080B736 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		BC8B315325B857090080B736 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC7027F425C314FE00B9D7FA /* Font */,
 				BC8B314625B856880080B736 /* Assets.xcassets */,
 				BC8B314825B856880080B736 /* LaunchScreen.storyboard */,
 				BC8B314B25B856880080B736 /* Info.plist */,
@@ -207,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8B314A25B856880080B736 /* LaunchScreen.storyboard in Resources */,
+				BC7027F825C3197800B9D7FA /* DurangoWestern.otf in Resources */,
 				BC8B314725B856880080B736 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
